@@ -1,0 +1,35 @@
+$primaryC: #feca6a;
+$greyBg: rgba(255, 255, 255, 0.8);
+$myFont: "Comic Sans MS", "Comic Sans", cursive;
+
+@mixin header {
+  --ion-background-color: $primaryC;
+  background-color: $primaryC;
+
+  ion-title {
+    color: white;
+
+  }
+}
+
+@mixin scrollb {
+  --offset-bottom: auto !important;
+  --overflow: hidden;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+ion-header {
+  @include header();
+
+}
+
+ion-content {
+  @include scrollb();
+
+  --background: white;
+  background-color: white;
+}

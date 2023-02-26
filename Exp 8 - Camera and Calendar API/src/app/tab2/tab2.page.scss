@@ -1,0 +1,7 @@
+@import '../tab1/tab1.page.scss';
+
+
+ion-header {
+  @include header();
+
+}
